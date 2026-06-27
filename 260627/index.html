@@ -588,7 +588,7 @@
   var body=document.body, deck=document.querySelector('.deck');
   var slides=[].slice.call(deck.children).filter(function(el){
     return el.classList && el.classList.contains('slide'); });
-  var n=slides.length, cur=0;
+  var n=slides.length, cur=0, step=0;
   var elCur=document.getElementById('navCur'), elTot=document.getElementById('navTot'),
       modeBtn=document.getElementById('modeBtn');
   elTot.textContent=n;
@@ -601,45 +601,50 @@
     var sc=Math.max(window.innerWidth/1280, window.innerHeight/720);
     document.documentElement.style.setProperty('--show-scale', sc);
   }
-  function syncVideos(){
-    /* in presentation mode: auto-play videos on the active slide (from start),
-       pause every other slide's videos. Videos are muted -> autoplay allowed. */
-    var on=body.classList.contains('mode-show');
-    for(var k=0;k<n;k++){
-      var vids=slides[k].getElementsByTagName('video');
-      for(var j=0;j<vids.length;j++){
-        if(on && k===cur){
-          try{ vids[j].currentTime=0; }catch(e){}
-          var p=vids[j].play(); if(p&&p.catch) p.catch(function(){});
-        } else {
-          try{ vids[j].pause(); }catch(e){}
-        }
-      }
+  function vidsOf(k){ return slides[k].getElementsByTagName('video'); }
+  function resetVideos(k){
+    var v=vidsOf(k);
+    for(var j=0;j<v.length;j++){ try{ v[j].pause(); v[j].currentTime=0; }catch(e){} }
+  }
+  function pauseAll(){ for(var k=0;k<n;k++) resetVideos(k); }
+  function go(i){
+    var t=Math.max(0,Math.min(n-1,i));
+    if(t!==cur) resetVideos(cur);     /* leaving: stop old slide's videos */
+    cur=t; step=0;
+    for(var k=0;k<n;k++) slides[k].classList.toggle('is-active', k===cur);
+    resetVideos(cur);                 /* arrive: paused on first frame (poster), NOT auto-played */
+    elCur.textContent=cur+1; setHash(cur);
+  }
+  /* forward: each press plays the next un-played video on this slide;
+     once all are played (or none), advance to the next slide */
+  function next(){
+    if(!body.classList.contains('mode-show')){ return; }
+    var v=vidsOf(cur);
+    if(step < v.length){
+      var pr=v[step].play(); if(pr&&pr.catch) pr.catch(function(){});
+      step++;
+    } else if(cur < n-1){
+      go(cur+1);
     }
   }
-  function go(i){
-    cur=Math.max(0,Math.min(n-1,i));
-    for(var k=0;k<n;k++) slides[k].classList.toggle('is-active', k===cur);
-    elCur.textContent=cur+1; setHash(cur);
-    syncVideos();
-  }
+  function prev(){ if(cur>0) go(cur-1); }
   function setShow(on){
     body.classList.toggle('mode-show', on);
     modeBtn.textContent = on ? LBL_SCROLL : LBL_SHOW;
     fit();
     if(on){ go(cur); }
     else { for(var k=0;k<n;k++) slides[k].classList.remove('is-active');
-           syncVideos();
+           pauseAll();
            if(slides[cur]) slides[cur].scrollIntoView({block:'start'}); }
   }
   function full(){
     if(!document.fullscreenElement){ if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen(); }
     else if(document.exitFullscreen){ document.exitFullscreen(); }
   }
-  document.getElementById('navPrev').onclick=function(){go(cur-1);};
-  document.getElementById('navNext').onclick=function(){go(cur+1);};
-  document.getElementById('zonePrev').onclick=function(){go(cur-1);};
-  document.getElementById('zoneNext').onclick=function(){go(cur+1);};
+  document.getElementById('navPrev').onclick=prev;
+  document.getElementById('navNext').onclick=next;
+  document.getElementById('zonePrev').onclick=prev;
+  document.getElementById('zoneNext').onclick=next;
   document.getElementById('navFull').onclick=full;
   modeBtn.onclick=function(){ setShow(!body.classList.contains('mode-show')); };
   document.addEventListener('keydown', function(e){
@@ -647,8 +652,8 @@
     var show=body.classList.contains('mode-show');
     if(!show){ if(e.key==='Enter'){ setShow(true); } return; }
     switch(e.key){
-      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': go(cur+1); e.preventDefault(); break;
-      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': go(cur-1); e.preventDefault(); break;
+      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': next(); e.preventDefault(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': prev(); e.preventDefault(); break;
       case 'Home': go(0); e.preventDefault(); break;
       case 'End': go(n-1); e.preventDefault(); break;
       case 'f': case 'F': full(); break;
