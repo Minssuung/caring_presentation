@@ -220,6 +220,8 @@ html, body { margin: 0; background: var(--gray-100); }
 }
 .pdf-btn:hover { background: var(--accent, #ff2d87); transform: translateY(-1px); }
 .pdf-btn:active { transform: translateY(0); }
+/* PDF 저장은 스크롤 보기에서만 노출 (발표 모드에선 숨김) */
+body.mode-show .pdf-btn { display: none; }
 @media print {
   /* force backgrounds/colors so the dark cover (and any tinted slide) prints correctly
      even when the browser's "Background graphics" option is off */

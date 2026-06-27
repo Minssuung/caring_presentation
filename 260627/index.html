@@ -596,7 +596,9 @@
   var LBL_SHOW='\u25A6 \uBC1C\uD45C \uBCF4\uAE30';           /* ▦ 발표 보기 */
   function setHash(i){ try{ history.replaceState(null,'','#'+(i+1)); }catch(e){} }
   function fit(){
-    var sc=Math.min(window.innerWidth/1280, window.innerHeight/720);
+    /* cover: fill the viewport on any aspect ratio (16:9, 16:10, ...) with no black margin.
+       80px slide gutters absorb the small edge crop so logos/footers stay intact. */
+    var sc=Math.max(window.innerWidth/1280, window.innerHeight/720);
     document.documentElement.style.setProperty('--show-scale', sc);
   }
   function go(i){
