@@ -601,10 +601,27 @@
     var sc=Math.max(window.innerWidth/1280, window.innerHeight/720);
     document.documentElement.style.setProperty('--show-scale', sc);
   }
+  function syncVideos(){
+    /* in presentation mode: auto-play videos on the active slide (from start),
+       pause every other slide's videos. Videos are muted -> autoplay allowed. */
+    var on=body.classList.contains('mode-show');
+    for(var k=0;k<n;k++){
+      var vids=slides[k].getElementsByTagName('video');
+      for(var j=0;j<vids.length;j++){
+        if(on && k===cur){
+          try{ vids[j].currentTime=0; }catch(e){}
+          var p=vids[j].play(); if(p&&p.catch) p.catch(function(){});
+        } else {
+          try{ vids[j].pause(); }catch(e){}
+        }
+      }
+    }
+  }
   function go(i){
     cur=Math.max(0,Math.min(n-1,i));
     for(var k=0;k<n;k++) slides[k].classList.toggle('is-active', k===cur);
     elCur.textContent=cur+1; setHash(cur);
+    syncVideos();
   }
   function setShow(on){
     body.classList.toggle('mode-show', on);
@@ -612,6 +629,7 @@
     fit();
     if(on){ go(cur); }
     else { for(var k=0;k<n;k++) slides[k].classList.remove('is-active');
+           syncVideos();
            if(slides[cur]) slides[cur].scrollIntoView({block:'start'}); }
   }
   function full(){
