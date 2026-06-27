@@ -597,7 +597,6 @@
   function setHash(i){ try{ history.replaceState(null,'','#'+(i+1)); }catch(e){} }
   function fit(){
     var sc=Math.min(window.innerWidth/1280, window.innerHeight/720);
-    if(body.classList.contains('mode-show')) sc*=0.94;
     document.documentElement.style.setProperty('--show-scale', sc);
   }
   function go(i){
