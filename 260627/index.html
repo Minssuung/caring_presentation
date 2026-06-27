@@ -56,7 +56,7 @@
         <div class="ct__left"><span class="eyebrow">SCOPE · 임소희</span><div class="ct__h">담당 영역</div><hr class="rule"><div class="ct__lead">주행 파트 담당<br>네트워크와 데이터 프로토콜까지</div></div>
         <div class="ct__bullets">
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">Mealky <span class="tag">식판정리 보조 주행로봇</span></div><div class="ct__bd">개발환경 구성 · 기본 동작·성능 테스트 · Navigation 개발</div></div></div>
-          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">Mobi <span class="tag">양팔로봇 주행 하부</span></div><div class="ct__bd">Mealky와 독립적인 로봇 · 주행 파트 전담턴</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">Mobi <span class="tag">양팔로봇 주행 하부</span></div><div class="ct__bd">Mealky와 독립적인 로봇 · 주행 파트 전담턴</div></div></div>
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">전장 · 네트워크</div><div class="ct__bd">물리 HW 구성 · DDS 멀티머신 토폴로지 · 네트워크 구성·테스트</div></div></div>
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">데이터 프로토콜</div><div class="ct__bd">센서·제어 전송 설계 · 파트별 데이터 통신 설계 · 통신 테스트</div></div></div>
         </div>
@@ -194,7 +194,7 @@
         <div class="ct__left"><span class="eyebrow">SCOPE · 박우림</span><div class="ct__h">담당 영역</div><hr class="rule"><div class="ct__lead">OpenArm 제어를 안정화<br>모방학습 데이터 수집 인프라 개발</div></div>
         <div class="ct__bullets">
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">OpenArm 제어 검증·안정화</div><div class="ct__bd">안전하고 자연스러운 제어 기술 · 실시간 상태 확인·조종 데스크톱 앱</div></div></div>
-          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">모방학습 데이터 수집 인프라</div><div class="ct__bd">LeRobot + ROS 통신으로 여러 머신에서 데이터를 수집하는 프레임워크</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">모방학습 데이터 수집 인프라</div><div class="ct__bd">LeRobot + ROS 통신으로 여러 머신에서 데이터를 수집하는 프레임워크</div></div></div>
         </div>
       </div>
     </div>
@@ -342,7 +342,7 @@
         </div>
         <div class="ct__bullets">
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">리드·팔로우 검증·안정화</div><div class="ct__bd">사람 팔을 로봇이 정확·안전하게 따라오는 텔레오퍼레이션</div></div></div>
-          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">밴디(Bandi) 리드디바이스 개발</div><div class="ct__bd">데이터 수집에 적합한 전용 착용·조작 장치 설계</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">밴디(Bandi) 리드디바이스 개발</div><div class="ct__bd">데이터 수집에 적합한 전용 착용·조작 장치 설계</div></div></div>
           <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">모방학습(GR00T)</div><div class="ct__bd">사람 시연 데이터로 로봇이 스스로 수행 (THOR 추론)</div></div></div>
         </div>
       </div>
@@ -572,5 +572,76 @@
   </div>
 
 </div>
+
+<!-- ===================== Slideshow controls ===================== -->
+<div class="show-nav" role="navigation" aria-label="슬라이드 이동">
+  <button class="show-btn" id="navPrev" title="이전 (←)" aria-label="이전">&#8249;</button>
+  <div class="show-counter"><b id="navCur">1</b> / <span id="navTot">41</span></div>
+  <button class="show-btn" id="navNext" title="다음 (→)" aria-label="다음">&#8250;</button>
+  <button class="show-btn" id="navFull" title="전체화면 (F)" aria-label="전체화면">&#9974;</button>
+</div>
+<div class="show-zone show-zone--prev" id="zonePrev" aria-hidden="true"></div>
+<div class="show-zone show-zone--next" id="zoneNext" aria-hidden="true"></div>
+<button class="mode-btn" id="modeBtn" type="button">&#9638; 스크롤 보기</button>
+<script>
+(function(){
+  var body=document.body, deck=document.querySelector('.deck');
+  var slides=[].slice.call(deck.children).filter(function(el){
+    return el.classList && el.classList.contains('slide'); });
+  var n=slides.length, cur=0;
+  var elCur=document.getElementById('navCur'), elTot=document.getElementById('navTot'),
+      modeBtn=document.getElementById('modeBtn');
+  elTot.textContent=n;
+  var LBL_SCROLL='\u25A6 \uC2A4\uD06C\uB864 \uBCF4\uAE30';   /* ▦ 스크롤 보기 */
+  var LBL_SHOW='\u25A6 \uBC1C\uD45C \uBCF4\uAE30';           /* ▦ 발표 보기 */
+  function setHash(i){ try{ history.replaceState(null,'','#'+(i+1)); }catch(e){} }
+  function fit(){
+    var sc=Math.min(window.innerWidth/1280, window.innerHeight/720);
+    if(body.classList.contains('mode-show')) sc*=0.94;
+    document.documentElement.style.setProperty('--show-scale', sc);
+  }
+  function go(i){
+    cur=Math.max(0,Math.min(n-1,i));
+    for(var k=0;k<n;k++) slides[k].classList.toggle('is-active', k===cur);
+    elCur.textContent=cur+1; setHash(cur);
+  }
+  function setShow(on){
+    body.classList.toggle('mode-show', on);
+    modeBtn.textContent = on ? LBL_SCROLL : LBL_SHOW;
+    fit();
+    if(on){ go(cur); }
+    else { for(var k=0;k<n;k++) slides[k].classList.remove('is-active');
+           if(slides[cur]) slides[cur].scrollIntoView({block:'start'}); }
+  }
+  function full(){
+    if(!document.fullscreenElement){ if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen(); }
+    else if(document.exitFullscreen){ document.exitFullscreen(); }
+  }
+  document.getElementById('navPrev').onclick=function(){go(cur-1);};
+  document.getElementById('navNext').onclick=function(){go(cur+1);};
+  document.getElementById('zonePrev').onclick=function(){go(cur-1);};
+  document.getElementById('zoneNext').onclick=function(){go(cur+1);};
+  document.getElementById('navFull').onclick=full;
+  modeBtn.onclick=function(){ setShow(!body.classList.contains('mode-show')); };
+  document.addEventListener('keydown', function(e){
+    if(e.metaKey||e.ctrlKey||e.altKey) return;
+    var show=body.classList.contains('mode-show');
+    if(!show){ if(e.key==='Enter'){ setShow(true); } return; }
+    switch(e.key){
+      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': go(cur+1); e.preventDefault(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': go(cur-1); e.preventDefault(); break;
+      case 'Home': go(0); e.preventDefault(); break;
+      case 'End': go(n-1); e.preventDefault(); break;
+      case 'f': case 'F': full(); break;
+      case 'Escape': setShow(false); break;
+    }
+  });
+  window.addEventListener('resize', fit);
+  var h=parseInt((location.hash||'').slice(1),10);
+  if(h>=1 && h<=n) cur=h-1;
+  setShow(true);   /* default: presentation mode */
+})();
+</script>
+
 </body>
 </html>
