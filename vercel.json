@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/", "destination": "/260627/", "permanent": false }
+  ]
+}

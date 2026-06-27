@@ -1,0 +1,63 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Content — Title + Bullets" subtitle="Two-column body slide" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<style>
+  html, body { margin: 0; }
+  .ct__grid { flex: 1; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 72px; align-items: start; }
+  .ct__left .eyebrow { display: block; margin-bottom: 20px; }
+  .ct__h { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+  .ct__left .rule { margin-top: 28px; }
+  .ct__lead { margin-top: 24px; font-size: 19px; color: var(--text-muted); line-height: 1.6; }
+  .ct__bullets { display: flex; flex-direction: column; gap: 30px; padding-top: 8px; }
+  .ct__b { display: flex; gap: 20px; align-items: flex-start; }
+  .ct__b .dot { flex: none; width: 10px; height: 10px; margin-top: 11px; border-radius: 999px; background: var(--accent); }
+  .ct__bt { font-size: 24px; font-weight: 600; color: var(--text-strong); }
+  .ct__bd { margin-top: 6px; font-size: 18px; color: var(--text-body); line-height: 1.55; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left">
+          <span class="eyebrow">PRINCIPLE 02</span>
+          <div class="ct__h">절제가<br>곧 위계다</div>
+          <hr class="rule">
+          <div class="ct__lead">강조가 많으면 강조가 사라진다. 한 슬라이드에는 하나의 초점만 둔다.</div>
+        </div>
+        <div class="ct__bullets">
+          <div class="ct__b">
+            <span class="dot"></span>
+            <div>
+              <div class="ct__bt">하나의 메시지</div>
+              <div class="ct__bd">한 장에 담는 핵심은 하나. 나머지는 그 메시지를 떠받친다.</div>
+            </div>
+          </div>
+          <div class="ct__b">
+            <span class="dot"></span>
+            <div>
+              <div class="ct__bt">한 점의 핑크</div>
+              <div class="ct__bd">강조색은 한 곳에만. 숫자 하나, 단어 하나, 규칙선 하나로 충분하다.</div>
+            </div>
+          </div>
+          <div class="ct__b">
+            <span class="dot"></span>
+            <div>
+              <div class="ct__bt">충분한 여백</div>
+              <div class="ct__bd">비어 있는 공간이 내용을 또렷하게 만든다. 채우려 하지 않는다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot">
+      <img class="slide__logo" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB">
+      <span class="slide__page">0<b>4</b> / 09</span>
+    </div>
+  </div>
+</body>
+</html>

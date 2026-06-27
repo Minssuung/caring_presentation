@@ -1,0 +1,119 @@
+/* ============================================================
+   Pinklab Slide — shared slide frame + helpers
+   Every sample slide is exactly 1280×720. Link styles.css for
+   tokens, then this file. Keep the field white/black; let pink
+   appear once per slide.
+   ============================================================ */
+
+.slide {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background: var(--surface-page);
+  color: var(--text-strong);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide--ink { background: var(--surface-ink); color: var(--text-on-dark); }
+.slide--paper { background: var(--surface-paper); }
+
+/* Standard padded body */
+.slide__body {
+  flex: 1;
+  padding: var(--slide-pad);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer mark line */
+.slide__foot {
+  position: absolute;
+  left: var(--slide-pad);
+  right: var(--slide-pad);
+  bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+.slide--ink .slide__foot { color: var(--gray-400); }
+
+.slide__mark { font-weight: 600; letter-spacing: -0.02em; color: var(--text-strong); }
+.slide__mark .dot { color: var(--accent); }
+.slide--ink .slide__mark { color: var(--white); }
+
+/* Footer logo (real asset) */
+.slide__logo { height: 18px; width: auto; display: block; }
+
+.slide__page { font-variant-numeric: tabular-nums; }
+.slide__page b { color: var(--accent); font-weight: 700; }
+
+/* Eyebrow (kicker) */
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+.slide--ink .eyebrow { color: var(--pink-400); }
+
+/* Signature pink rule */
+.rule {
+  width: 56px;
+  height: var(--rule-w);
+  background: var(--rule-accent);
+  border: 0;
+  border-radius: var(--radius-pill);
+}
+
+/* Headings */
+.s-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+.s-title .reg { font-weight: var(--fw-regular); }
+.s-title .pink { color: var(--accent); }
+
+.s-h2 { font-size: var(--fs-h2); font-weight: var(--fw-bold); line-height: var(--lh-snug); letter-spacing: var(--ls-snug); }
+.s-h3 { font-size: var(--fs-h3); font-weight: var(--fw-semibold); line-height: var(--lh-snug); }
+
+.s-lead {
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--text-body);
+  font-weight: var(--fw-regular);
+}
+.slide--ink .s-lead { color: var(--gray-300); }
+
+/* Bullets */
+.bullets { display: flex; flex-direction: column; gap: 20px; }
+.bullet { display: flex; gap: 16px; align-items: flex-start; font-size: var(--fs-body); line-height: var(--lh-relaxed); color: var(--text-body); }
+.slide--ink .bullet { color: var(--gray-300); }
+.bullet::before {
+  content: "";
+  flex: none;
+  width: 8px; height: 8px;
+  margin-top: 0.55em;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+/* Big numeral / section index — bold (the proper way) */
+.bignum {
+  font-size: var(--fs-mega);
+  font-weight: var(--fw-display);
+  line-height: 0.9;
+  letter-spacing: var(--ls-tight);
+}
+.bignum .pink { color: var(--accent); }
+
+/* English-only serif accent */
+.serif { font-family: var(--font-serif-en); font-weight: var(--fw-regular); }

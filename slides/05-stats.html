@@ -1,0 +1,50 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Stats — KPI Row" subtitle="Big thin numerals, one pink" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<style>
+  html, body { margin: 0; }
+  .kp__head .eyebrow { display: block; margin-bottom: 18px; }
+  .kp__title { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; }
+  .kp__row { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; }
+  .kp__cell { padding-right: 40px; }
+  .kp__cell + .kp__cell { border-left: 1px solid var(--border-subtle); padding-left: 48px; }
+  .kp__val { font-size: 128px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--text-strong); }
+  .kp__val .u { font-size: 0.34em; font-weight: 600; margin-left: 0.06em; }
+  .kp__val.accent { color: var(--accent); }
+  .kp__val.blue { color: var(--secondary); }
+  .kp__lbl { margin-top: 16px; font-size: 19px; color: var(--text-muted); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide__body">
+      <div class="kp__head">
+        <span class="eyebrow">RESULTS · 2026 Q2</span>
+        <div class="kp__title">숫자로 보는 성과</div>
+      </div>
+      <div class="kp__row">
+        <div class="kp__cell">
+          <div class="kp__val accent">98<span class="u">%</span></div>
+          <div class="kp__lbl">고객 만족도</div>
+        </div>
+        <div class="kp__cell">
+          <div class="kp__val">3.2<span class="u">x</span></div>
+          <div class="kp__lbl">전환율 향상</div>
+        </div>
+        <div class="kp__cell">
+          <div class="kp__val blue">12<span class="u">일</span></div>
+          <div class="kp__lbl">평균 제작 기간 단축</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot">
+      <img class="slide__logo" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB">
+      <span class="slide__page">0<b>5</b> / 09</span>
+    </div>
+  </div>
+</body>
+</html>

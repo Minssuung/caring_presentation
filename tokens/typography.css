@@ -1,0 +1,60 @@
+/* ============================================================
+   Pinklab Slide — Typography tokens
+   Korean is ALWAYS gothic (Noto Sans KR) — never serif. Large and
+   emphasised text is set BOLD (the proper way), not thin. A Latin
+   serif (Newsreader) is reserved for English-only accents — a
+   pull quote or a hero phrase in English. Korean never uses serif.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  /* Noto Sans KR is the primary face — it ships by default in Google
+     Slides/Docs, so exported decks won't break. Pretendard kept as a
+     graceful local fallback for anyone who has it installed. */
+  --font-sans: "Noto Sans KR", "Pretendard Variable", Pretendard, -apple-system,
+               BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+               system-ui, sans-serif;
+  /* English-only serif accent. Do NOT set Korean text in this face. */
+  --font-serif-en: "Newsreader", Georgia, "Times New Roman", serif;
+  /* Monospace — for document meta, kickers, section numbers, figures/amounts.
+     The matte "engineering doc" voice. Korean falls back to Pretendard. */
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+               "Pretendard Variable", monospace;
+  --font-display: var(--font-sans);   /* display is bold gothic */
+
+  /* ---- Weights ---- */
+  --fw-light:    300; /* @kind font */  /* body de-emphasis only — not for display */
+  --fw-regular:  400; /* @kind font */
+  --fw-medium:   500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:     700; /* @kind font */
+  --fw-extrabold:800; /* @kind font */  /* large display / hero */
+  --fw-black:    900; /* @kind font */
+
+  /* ---- Type scale (px — tuned for 1280×720 slides + general use) ---- */
+  --fs-eyebrow:  14px;   /* uppercase, letterspaced kicker */
+  --fs-caption:  16px;
+  --fs-body-sm:  18px;
+  --fs-body:     22px;
+  --fs-body-lg:  26px;
+  --fs-h3:       34px;
+  --fs-h2:       48px;
+  --fs-h1:       68px;
+  --fs-display:  96px;
+  --fs-mega:    140px;   /* hero numerals / single-word covers */
+
+  /* ---- Display emphasis weight (the proper, bold way) ---- */
+  --fw-display: var(--fw-extrabold);
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.04; /* @kind font */    /* display */
+  --lh-snug:    1.16; /* @kind font */    /* headings */
+  --lh-normal:  1.4;  /* @kind font */
+  --lh-relaxed: 1.6;  /* @kind font */    /* body copy */
+
+  /* ---- Letter spacing ---- */
+  --ls-eyebrow:  0.18em; /* @kind font */ /* the signature spaced kicker */
+  --ls-tight:   -0.025em; /* @kind font */ /* large bold display */
+  --ls-snug:    -0.01em; /* @kind font */
+  --ls-normal:   0;      /* @kind font */
+}

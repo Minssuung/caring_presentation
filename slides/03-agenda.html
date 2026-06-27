@@ -1,0 +1,45 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Agenda — Contents" subtitle="Numbered list, pink indices" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<style>
+  html, body { margin: 0; }
+  .ag__head { display: flex; align-items: flex-end; justify-content: space-between; }
+  .ag__head .eyebrow { display: block; margin-bottom: 16px; }
+  .ag__title { font-size: 52px; font-weight: 700; letter-spacing: -0.02em; }
+  .ag__list { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 80px; }
+  .ag__item { display: flex; align-items: baseline; gap: 24px; padding: 22px 0; border-top: 1px solid var(--border-subtle); }
+  .ag__idx { font-size: 22px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; width: 40px; flex: none; }
+  .ag__label { font-size: 26px; font-weight: 500; color: var(--text-strong); }
+  .ag__note { margin-left: auto; font-size: 15px; color: var(--text-faint); align-self: center; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide__body">
+      <div class="ag__head">
+        <div>
+          <span class="eyebrow">CONTENTS</span>
+          <div class="ag__title">오늘 다룰 내용</div>
+        </div>
+        <hr class="rule">
+      </div>
+      <div class="ag__list">
+        <div class="ag__item"><span class="ag__idx">01</span><span class="ag__label">브랜드 개요</span><span class="ag__note">5 min</span></div>
+        <div class="ag__item"><span class="ag__idx">02</span><span class="ag__label">디자인 원칙</span><span class="ag__note">8 min</span></div>
+        <div class="ag__item"><span class="ag__idx">03</span><span class="ag__label">컬러 &amp; 타이포</span><span class="ag__note">6 min</span></div>
+        <div class="ag__item"><span class="ag__idx">04</span><span class="ag__label">슬라이드 시스템</span><span class="ag__note">7 min</span></div>
+        <div class="ag__item"><span class="ag__idx">05</span><span class="ag__label">적용 사례</span><span class="ag__note">5 min</span></div>
+        <div class="ag__item"><span class="ag__idx">06</span><span class="ag__label">다음 단계</span><span class="ag__note">4 min</span></div>
+      </div>
+    </div>
+    <div class="slide__foot">
+      <img class="slide__logo" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB">
+      <span class="slide__page">0<b>3</b> / 09</span>
+    </div>
+  </div>
+</body>
+</html>

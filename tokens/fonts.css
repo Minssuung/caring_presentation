@@ -1,0 +1,111 @@
+/* ============================================================
+   Pinklab Slide — Webfonts
+   Sans  : Noto Sans KR (primary — Korean + Latin gothic). Chosen
+           because it ships by default in Google Slides / Docs, so
+           decks exported there will NOT fall back / break. Carries
+           ALL Korean text and most display, set bold.
+   Serif : Newsreader (English-only accent — pull quotes, hero
+           phrases in English). Never used for Korean.
+   Mono  : IBM Plex Mono (document meta / figures).
+   ------------------------------------------------------------
+   Declared as explicit @font-face so the system ships them to
+   consumers. Sources are CDN-hosted woff2. To self-host, drop
+   the binaries in /assets/fonts and swap the src url()s.
+   ============================================================ */
+
+/* ---- Noto Sans KR (weights 300–900 used) ---- */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-300-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-800-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/korean-900-normal.woff2") format("woff2");
+}
+
+/* ---- Newsreader (English-only serif accent) ---- */
+@font-face {
+  font-family: "Newsreader";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Newsreader";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Newsreader";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Newsreader";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-400-italic.woff2") format("woff2");
+}
+
+/* ---- IBM Plex Mono (document meta / figures) ---- */
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@latest/latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@latest/latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@latest/latin-600-normal.woff2") format("woff2");
+}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>케어링 인턴 담당 업무 발표 · 임소희 · 박우림 · 최민성</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../slides/slide.css">
+<link rel="stylesheet" href="../deck-common.css">
+</head>
+<body>
+<button class="pdf-btn" type="button" onclick="window.print()" aria-label="PDF로 저장">⤓&nbsp;PDF 저장</button>
+
+<div class="deck">
+
+  <!-- ===================== 01 · COVER ===================== -->
+  <div class="slide slide--ink">
+    <div class="slide__body cover__body">
+      <div class="cover__top">
+        <div class="lockup"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><span class="bar"></span><img class="pl" src="../assets/logos/pinklab-logo-white.png" alt="PINKLAB"></div>
+        <div class="cover__meta">Intern Report</div>
+      </div>
+      <div class="cover__main">
+        <div class="eyebrow">CARING PROJECT · 2026.06</div>
+        <div class="cover__title"><span class="reg">케어링 인턴</span><br>담당 업무<span class="pink">.</span></div>
+        <div class="cover__sub">모빌리티·네트워크, OpenArm 제어, 리드디바이스·모방학습 — 세 파트가 하나의 시스템으로.</div>
+      </div>
+      <div class="cover__bottom"><hr class="rule"><div class="cover__date">임소희 · 박우림 · 최민성</div></div>
+    </div>
+  </div>
+
+  <!-- ===================== 02 · TEAM OVERVIEW ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">TEAM · 담당 업무 개요</span><div class="mg__title">담당 장비</div></div>
+      <div style="flex:1;min-height:0;margin-top:22px;border-radius:var(--radius-lg);background:var(--white);overflow:hidden"><img src="media/image-20260624-084923.png" alt="담당 업무 개요" style="width:100%;height:100%;object-fit:contain"></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>02</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 03 · SECTION 01 DIVIDER ===================== -->
+  <div class="slide">
+    <div class="slide__body" style="justify-content:center">
+      <div style="display:flex;align-items:flex-end;gap:48px">
+        <div class="bignum">0<span class="pink">1</span></div>
+        <div style="padding-bottom:22px"><span class="eyebrow" style="display:block;margin-bottom:14px">SECTION 01</span><div style="font-size:56px;font-weight:800;letter-spacing:-0.025em;line-height:1.05">임소희</div><div style="margin-top:16px;font-size:20px;color:var(--text-muted);max-width:26em;line-height:1.5">모빌리티(주행) 파트 + 전장·네트워크·데이터 프로토콜</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== 04 · 임소희 담당 영역 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">SCOPE · 임소희</span><div class="ct__h">담당 영역</div><hr class="rule"><div class="ct__lead">주행 파트 담당<br>네트워크와 데이터 프로토콜까지</div></div>
+        <div class="ct__bullets">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">Mealky <span class="tag">식판정리 보조 주행로봇</span></div><div class="ct__bd">개발환경 구성 · 기본 동작·성능 테스트 · Navigation 개발</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">Mobi <span class="tag">양팔로봇 주행 하부</span></div><div class="ct__bd">Mealky와 독립적인 로봇 · 주행 파트 전담턴</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">전장 · 네트워크</div><div class="ct__bd">물리 HW 구성 · DDS 멀티머신 토폴로지 · 네트워크 구성·테스트</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">데이터 프로토콜</div><div class="ct__bd">센서·제어 전송 설계 · 파트별 데이터 통신 설계 · 통신 테스트</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>04</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 05 · 하드웨어 안정화 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">WORK · 임소희</span><div class="ct__h">Mealky 하드웨어 안정화</div><hr class="rule"><div class="ct__lead">Mealky 주행 로봇을 운용 가능한 상태로 안정화</div></div>
+        <div style="display:flex;gap:32px;align-items:stretch;margin-top:50px;min-height:0">
+          <div class="ct__bullets" style="flex:1">
+            <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">Mealky 개발 환경 구성</div><div class="ct__bd">Ubuntu 24.04 / ROS2 Jazzy 기반 환경 세팅 / 주행 패키지 빌드</div></div></div>
+            <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">기구 · 구성 점검</div><div class="ct__bd">하드웨어 구성 점검 및 안정화</div></div></div>
+            <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">운용 가능한 상태로 안정화</div><div class="ct__bd">주행 테스트 전 운용 안정성 확보</div></div></div>
+          </div>
+          <div style="width:300px;margin-top:40px;flex:none;border-radius:var(--radius-lg);background:var(--white);overflow:hidden"><img src="media/image-20260626-142230.png" alt="하드웨어 안정화" style="width:100%;height:100%;object-fit:contain"></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>05</b> / 41</span></div>
+  </div>
+
+
+  <!-- ===================== 06 · 네트워크 토폴로지 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <span class="eyebrow">NETWORK · 임소희</span>
+      <div class="mg__title" style="margin-top:10px">Mobi 멀티머신 네트워크 토폴로지</div>
+      <p style="margin-top:12px;font-size:16px;color:var(--text-muted);line-height:1.5">n대 노드를 유선 백본으로 묶어 양팔로봇·모빌리티 베이스의 센서·상태를 한 타임라인에 수집<br>LeRobot 데이터셋 → 향후 VLA 추론까지 같은 구조 재사용<br>센서 추가 확장성 확보</p>
+      <div style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:34px;margin-top:16px;height:400px">
+        <div style="border-radius:var(--radius-lg);background:var(--white);overflow:hidden"><img src="media/8673a015-acde-4d33-b188-e849b9a16ba9.png" alt="네트워크 토폴로지" style="width:100%;height:100%;object-fit:contain"></div>
+        <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">멀티머신 분산</div><div class="ct__bd">영상·제어·추론 역할 분리, 대역폭 한계 해소</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">스위치 허브</div><div class="ct__bd">노드 확장성, 데이터망 결정성 ↑</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">유선 LAN</div><div class="ct__bd">실시간 영상·제어 패킷 손실·지연 최소화</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">실시간 제어 버스</div><div class="ct__bd">CAN·RS485 — 네트워크 미경유, 보드 로컬</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">센서 (USB)</div><div class="ct__bd">로컬 캡처 후 ROS2 토픽 발행</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>06</b> / 41</span></div>
+  </div>
+
+
+  <!-- ===================== 08 · 트러블슈팅 ===================== 
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <span class="eyebrow">TROUBLESHOOT · 임소희</span>
+      <div class="rk__title" style="margin:10px 0 28px">주요 이슈 해결 이력</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 56px;flex:1;align-content:start">
+        <div>
+          <div style="border-top:1px solid var(--border-subtle);padding:15px 0">
+            <div style="font-size:18px;font-weight:600;color:var(--text-strong)">ROS2 버전 불일치 (Humble → Jazzy)</div>
+            <div style="margin-top:5px;font-size:15px;color:var(--text-muted);line-height:1.5">API 변경·deprecated 인터페이스 → Jazzy API로 포팅 완료. 팀 공통 스택 유지.</div>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding:15px 0">
+            <div style="font-size:18px;font-weight:600;color:var(--text-strong)">모터 · 라이다 인식 실패</div>
+            <div style="margin-top:5px;font-size:15px;color:var(--text-muted);line-height:1.5">udev 하드코딩으로 USB 포트 순서 바뀔 때마다 실패 → 시리얼 값 기반 udev 자동화. 이후 재설정 불필요.</div>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding:15px 0">
+            <div style="font-size:18px;font-weight:600;color:var(--text-strong)">URDF 계통 오차</div>
+            <div style="margin-top:5px;font-size:15px;color:var(--text-muted);line-height:1.5">패키지 URDF·모터 치수가 실물과 상이 → 실측값으로 보정 완료. odom 왜곡 방지.</div>
+          </div>
+        </div>
+        <div>
+          <div style="border-top:1px solid var(--border-subtle);padding:15px 0">
+            <div style="font-size:18px;font-weight:600;color:var(--text-strong)">Thor 유선 LAN RX 수신 불량</div>
+            <div style="margin-top:5px;font-size:15px;color:var(--text-muted);line-height:1.5">NetworkManager 임시 프로파일이 IP 바인딩 방해 → 메인 프로파일 자동 연결·최고 우선순위 설정, 임시 프로파일 삭제.</div>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding:15px 0">
+            <div style="font-size:18px;font-weight:600;color:var(--text-strong)">카메라 + CAN-모터 포트·대역폭 한계</div>
+            <div style="margin-top:5px;font-size:15px;color:var(--text-muted);line-height:1.5">단일 머신(Thor)에서 동시 처리 → 프레임 드랍·모터 지터·LeRobot 크래시 → 멀티머신 분산 구성 + 유선 이더넷으로 해결.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>07</b> / 41</span></div>
+  </div>
+  -->
+
+  <!-- ===================== 09 · 현재까지 성과 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="rs__head"><span class="eyebrow">RESULTS · 임소희</span><div class="rs__title">현재까지 성과</div></div>
+      <div class="rs__list">
+        <div class="rs__item"><span class="rs__mk rs__mk--done">✓</span><span class="rs__lbl">개발환경 구성 완료<span class="sub">Ubuntu 24.04 / ROS2 Jazzy / 주행 패키지 빌드</span></span></div>
+        <div class="rs__item"><span class="rs__mk rs__mk--done">✓</span><span class="rs__lbl">Mealky 기구·구성 점검<span class="sub">라이다·모터·URDF 점검</span></span></div>
+        <div class="rs__item"><span class="rs__mk rs__mk--done">✓</span><span class="rs__lbl">모방학습 통신 기술 검토 완료<span class="sub">OpenArm↔Thor CAN 통신 · LeRobot 환경 세팅</span></span></div>
+        <div class="rs__item"><span class="rs__mk rs__mk--done">✓</span><span class="rs__lbl">Thor 전장·네트워크 안정화<span class="sub">RX 불량 해소, CAN/이더넷 사양 확정</span></span></div>
+        <div class="rs__item rs__item--prog"><span class="rs__mk rs__mk--prog">…</span><span class="rs__lbl">Mobi 네트워크 통신 구성<span class="sub">진행 중</span></span></div>
+        <div class="rs__item rs__item--prog"><span class="rs__mk rs__mk--prog">…</span><span class="rs__lbl">Mealky 주행 패키지 고도화<span class="sub">예정</span></span></div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>08</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 10 · 임소희 목표 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">GOAL · 임소희</span><div class="mg__title">앞으로의 목표</div></div>
+      <div class="md__cols" style="margin-top:34px">
+        <div class="md__card md__card--star"><span class="md__cap">모빌리티</span><div class="md__name">주행 고도화</div>
+          <div class="md__react">· 주행 패키지 성능 고도화 개발<br>· 시나리오에 따른 주행 기능 구현<br>· UWB 기반 Human Following 개발<br>· Mobi 모빌리티 개발</div></div>
+        <div class="md__card md__card--star"><span class="md__cap">네트워크</span><div class="md__name">통신 설계 · 안정화</div>
+          <div class="md__react">· 각 파트별 데이터 통신 프로토콜 설계<br>· 멀티머신 DDS 통신 안정화<br>&nbsp;&nbsp;— 지연 · 멀티캐스트 검증<br>· 시나리오에 따른 모방학습 데이터셋 설계</div></div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>09</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 11 · SECTION 02 DIVIDER ===================== -->
+  <div class="slide">
+    <div class="slide__body" style="justify-content:center">
+      <div style="display:flex;align-items:flex-end;gap:48px">
+        <div class="bignum">0<span class="pink">2</span></div>
+        <div style="padding-bottom:22px"><span class="eyebrow" style="display:block;margin-bottom:14px">SECTION 02</span><div style="font-size:56px;font-weight:800;letter-spacing:-0.025em;line-height:1.05">박우림</div><div style="margin-top:16px;font-size:20px;color:var(--text-muted);max-width:26em;line-height:1.5">OpenArm 제어 검증·안정화 + 모방학습 데이터 수집 인프라</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== 12 · 박우림 담당 영역 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">SCOPE · 박우림</span><div class="ct__h">담당 영역</div><hr class="rule"><div class="ct__lead">OpenArm 제어를 안정화<br>모방학습 데이터 수집 인프라 개발</div></div>
+        <div class="ct__bullets">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">OpenArm 제어 검증·안정화</div><div class="ct__bd">안전하고 자연스러운 제어 기술 · 실시간 상태 확인·조종 데스크톱 앱</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">모방학습 데이터 수집 인프라</div><div class="ct__bd">LeRobot + ROS 통신으로 여러 머신에서 데이터를 수집하는 프레임워크</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>11</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 13 · 로봇 팔 제어 3가지 모드 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="md__head"><span class="eyebrow">WORK 01 · 박우림</span><div class="md__title">로봇 팔 제어 — 3가지 모드</div></div>
+      <div class="md__cols">
+        <div class="md__card md__card--star"><span class="md__cap">무중력 · Zero-G</span><div class="md__name">중력보상</div><div class="md__react">잡고 움직이면 따라오고, 놓으면 그 자리에 멈춘다.</div><div class="md__use"><b>언제</b> — 동작을 직접 손으로 가르칠 때</div></div>
+        <div class="md__card md__card--star"><span class="md__cap">유연</span><div class="md__name">컴플라이언스</div><div class="md__react">힘을 가하면 크게 휘고, 빼면 천천히 복귀.</div><div class="md__use"><b>언제</b> — 깨지기 쉬운 물건·사람 접촉</div></div>
+        <div class="md__card md__card--star"><span class="md__cap">탄성</span><div class="md__name">임피던스</div><div class="md__react">조금 밀리지만 바로 복귀. 스프링처럼.</div><div class="md__use"><b>언제</b> — 위치 유지하며 충격 흡수</div></div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>12</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 14 · Demo 무중력 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">로봇 팔 제어 — 무중력 모드</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/IMG_0961.mp4" muted loop playsinline controls preload="metadata" poster="media/IMG_0961.poster.jpg"></video><img class="vthumb" src="media/IMG_0961.poster.jpg" alt=""></div><figcaption><span class="k">제어 데모</span>무중력 모드</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>13</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 15 · Demo 개발툴 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">로봇 팔 제어 — 무중력 모드</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/Screencast_from_2026-06-12_18-31-35_trimmed2.mp4" muted loop playsinline controls preload="metadata" poster="media/Screencast_from_2026-06-12_18-31-35_trimmed2.poster.jpg"></video><img class="vthumb" src="media/Screencast_from_2026-06-12_18-31-35_trimmed2.poster.jpg" alt=""></div><figcaption><span class="k">개발툴</span></figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>14</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 16 · Demo 탄성 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">로봇 팔 제어 — 탄성 모드</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/IMG_0950.mp4" muted loop playsinline controls preload="metadata" poster="media/IMG_0950.poster.jpg"></video><img class="vthumb" src="media/IMG_0950.poster.jpg" alt=""></div><figcaption><span class="k">제어 데모</span>탄성 모드</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>15</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 17 · Demo 유연 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">로봇 팔 제어 — 유연 모드</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/IMG_0949.mp4" muted loop playsinline controls preload="metadata" poster="media/IMG_0949.poster.jpg"></video><img class="vthumb" src="media/IMG_0949.poster.jpg" alt=""></div><figcaption><span class="k">제어 데모</span>유연 모드</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>16</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 18 · 페이로드 자동 캘리브레이션 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">페이로드 자동 캘리브레이션 구현</div></div>
+      <!-- 자동 캘리브레이션 오차 -30%. 버튼 한번으로 9자세 자동 보정 -->
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/Screencast_from_2026-06-12_18-59-08.mp4" muted loop playsinline controls preload="metadata" poster="media/Screencast_from_2026-06-12_18-59-08.poster.jpg"></video><img class="vthumb" src="media/Screencast_from_2026-06-12_18-59-08.poster.jpg" alt=""></div><figcaption><span class="k">데모</span>페이로드 자동 보정</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>17</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 19 · 실시간 텔레옵 구현 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">DEMO · 박우림</span><div class="mg__title">MoveIt Servo 실시간 텔레옵 구현</div></div>
+      <div class="mg mg--2">
+        <figure><div class="frame"><video  src="media/Screencast_from_2026-06-22_13-25-21.mp4" muted loop playsinline controls preload="metadata" poster="media/Screencast_from_2026-06-22_13-25-21.poster.jpg"></video><img class="vthumb" src="media/Screencast_from_2026-06-22_13-25-21.poster.jpg" alt=""></div><figcaption><span class="k">데모</span>웹 앱 실시간 조종 (MoveIt Servo)</figcaption></figure>
+        <figure><div class="frame"><video  src="media/IMG_0999.mp4" muted loop playsinline controls preload="metadata" poster="media/IMG_0999.poster.jpg"></video><img class="vthumb" src="media/IMG_0999.poster.jpg" alt=""></div><figcaption><span class="k">데모</span>실시간 조종 결과</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>18</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 20 · 개발툴·데이터 수집 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">WORK 02·03 · 박우림</span><div class="ct__h">개발툴 · 데이터 수집</div><hr class="rule"><div class="ct__lead">PyQt 데스크톱 앱으로 로봇을 시각화·조종<br>LeROSBot 데이터 수집 프로세스 개발</div></div>
+        <div class="ct__bullets">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">오픈암 제어 개발툴</div><div class="ct__bd">3D 뷰 · 제어 · 실험실 · 실시간 조종 · 텔레메트리 (PyQt)</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">LeROSBot Phase 1·2 완료</div><div class="ct__bd">네트워크 인프라(시계 5ms 동기화) · 조종 데이터 30Hz 기록</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">LeROSBot Phase 3 진행 중</div><div class="ct__bd">3대 카메라 영상 동시 기록</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>19</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 21 · 박우림 목표 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">GOAL · 박우림</span><div class="ct__h">로봇이 스스로<br>동작을 <span style="color:var(--accent)">배울 수</span> 있는가</div><hr class="rule"><div class="ct__lead">기술 실현 가능성을 실제 데모로 보여주는 것이 목표</div></div>
+        <div class="ct__bullets">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">모방학습 파이프라인 완성·데모</div><div class="ct__bd">수집 → 학습 → 로봇이 같은 동작을 스스로 반복</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">촉각 센서 통합 검토</div><div class="ct__bd">손끝 센서로 "잡았는지" 감지 — 섬세한 조작 가능성</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">사용자 요구 기반 UI</div><div class="ct__bd">센터 직원 인터뷰 → "정리정돈"·"드럼"을 버튼 하나로</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>20</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 21 · SECTION 03 DIVIDER ===================== -->
+  <div class="slide">
+    <div class="slide__body" style="justify-content:center">
+      <div style="display:flex;align-items:flex-end;gap:48px">
+        <div class="bignum">0<span class="pink">3</span></div>
+        <div style="padding-bottom:22px"><span class="eyebrow" style="display:block;margin-bottom:14px">SECTION 03</span><div style="font-size:56px;font-weight:800;letter-spacing:-0.025em;line-height:1.05">최민성</div><div style="margin-top:16px;font-size:20px;color:var(--text-muted);max-width:30em;line-height:1.5">리드디바이스 텔레옵 검증·안정화 + 밴디 개발 + 모방학습(GR00T)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== 22 · 최민성 담당 영역 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="ct__grid">
+        <div class="ct__left"><span class="eyebrow">SCOPE · 최민성</span><div class="ct__h">담당 영역</div><hr class="rule">
+          <div class="ct__lead">밴드형 리드 디바이스 개발·안정화</div>
+          <!-- <div class="callout"><span class="k">인수인계</span><p>리드디바이스 장비·기본동작은 사수 최원호님으로부터 인수인계받아 협업하며 개발 중.</p></div> -->
+        </div>
+        <div class="ct__bullets">
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">리드·팔로우 검증·안정화</div><div class="ct__bd">사람 팔을 로봇이 정확·안전하게 따라오는 텔레오퍼레이션</div></div></div>
+          <div class="ct__b"><span class="dot dot--blue"></span><div><div class="ct__bt">밴디(Bandi) 리드디바이스 개발</div><div class="ct__bd">데이터 수집에 적합한 전용 착용·조작 장치 설계</div></div></div>
+          <div class="ct__b"><span class="dot"></span><div><div class="ct__bt">모방학습(GR00T)</div><div class="ct__bd">사람 시연 데이터로 로봇이 스스로 수행 (THOR 추론)</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>22</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 23 · 텔레옵 단계 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="jr__head"><span class="eyebrow">WORK 01 · 최민성</span><div class="jr__title">텔레옵 검증 — 단계별로 안전하게</div></div>
+      <div class="jr__row">
+        <div class="jr__step"><div class="jr__n"><br>01</div><div class="jr__nm">미니 팔로우암 안정화</div><div class="jr__ds">기준 장비(리드 암)로 추종 확인<br>통신·각도·추종 정상</div></div>
+        <div class="jr__step"><div class="jr__n"><br>02</div><div class="jr__nm">밴드 → 미니 로봇팔</div><div class="jr__ds">센서 노이즈 문제 해결<br>정확·안전 추종</div></div>
+        <div class="jr__step"><div class="jr__n"><br>03</div><div class="jr__nm">시뮬 안전 검증</div><div class="jr__ds">충돌 방지·낙하 방지 선행 확인</div></div>
+        <div class="jr__step"><div class="jr__n"><br>04</div><div class="jr__nm">실물 OpenArm</div><div class="jr__ds">사람 팔 추종 · 충돌 시 자동 정지</div></div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>23</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 24 · 장비 구성 1/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">EQUIPMENT · 최민성</span><div class="mg__title">장비 구성 (1/2)</div></div>
+      <div class="mg mg--2"><figure><div class="frame"><img src="media/imu_serial.png" alt="IMU 센서 — RS485 데이지체인"></div><figcaption>IMU 센서 — RS485 데이지체인</figcaption></figure><figure><div class="frame"><img src="media/dev_band_lead.jpg" alt="밴드형 리드디바이스 (웨어러블)"></div><figcaption>밴드형 리드디바이스 (웨어러블)</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>24</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 25 · 장비 구성 2/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">EQUIPMENT · 최민성</span><div class="mg__title">장비 구성 (2/2)</div></div>
+      <div class="mg mg--2"><figure><div class="frame"><img src="media/dev_lead_arm.jpg" alt="리드 암 — 엔코더 기준(양팔)"></div><figcaption>리드 암 — 엔코더 기준(양팔)</figcaption></figure><figure><div class="frame"><img src="media/dev_mini_follow.jpg" alt="미니 로봇팔 (팔로우암)"></div><figcaption>미니 로봇팔 (팔로우암)</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>25</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 26 · 미니 리드암-팔로 텔레옵 1/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">TELEOP · 최민성</span><div class="mg__title">미니 리드 - 팔로워 텔레옵 </div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/demo_minifollow.mp4" muted loop playsinline controls preload="metadata" poster="media/demo_minifollow.poster.jpg"></video><img class="vthumb" src="media/demo_minifollow.poster.jpg" alt=""></div><figcaption><span class="k">추종</span>리드 암 → 미니 로봇팔</figcaption></figure></div>
+      
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>26</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 26 · 밴드→미니 텔레옵 1/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">TELEOP · 최민성</span><div class="mg__title">사람 팔(밴드) → 미니 로봇팔 텔레옵 (1/2)</div></div>
+      <div class="mg mg--2">
+        <figure><div class="frame"><video  src="media/gimbal_spike.mp4" muted loop playsinline controls preload="metadata" poster="media/gimbal_spike.poster.jpg"></video><img class="vthumb" src="media/gimbal_spike.poster.jpg" alt=""></div><figcaption><span class="k">개선 전</span>센서 오류로 팔이 튐</figcaption></figure>
+        <figure><div class="frame"><video  src="media/teleop_mini_c.mp4" muted loop playsinline controls preload="metadata" poster="media/teleop_mini_c.poster.jpg"></video><img class="vthumb" src="media/teleop_mini_c.poster.jpg" alt=""></div><figcaption><span class="k">개선 후</span>안정적 추종</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>27</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 27 · 밴드→미니 텔레옵 2/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">TELEOP · 최민성</span><div class="mg__title">사람 팔(밴드) → 미니 로봇팔 텔레옵 (2/2)</div></div>
+      <div class="mg mg--1">
+        <figure><div class="frame"><img src="media/joint_stability.svg" alt="동작 안정성 측정"></div><figcaption><span class="k">측정</span>동작 안정성 측정</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>28</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 28 · 시뮬 안전 검증 1/3 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">SAFETY · 최민성</span><div class="mg__title">시뮬레이션 OpenArm 텔레옵 — 안전 검증 (1/4)</div></div>
+      <div class="mg mg--2"><figure><div class="frame"><video  src="media/demo_sim_openarm.mp4" muted loop playsinline controls preload="metadata" poster="media/demo_sim_openarm.poster.jpg"></video><img class="vthumb" src="media/demo_sim_openarm.poster.jpg" alt=""></div><figcaption><span class="k">시뮬</span>OpenArm 텔레옵</figcaption></figure><figure><div class="frame"><img src="media/sim_workspace.png" alt="로봇팔 동작 범위 점검"></div><figcaption><span class="k">시뮬</span>로봇팔 동작 범위 점검</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>29</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 29 · 시뮬 안전 검증 2/3 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">SAFETY · 최민성</span><div class="mg__title">시뮬레이션 OpenArm 텔레옵 — 안전 검증 (2/4)</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/sim_selfcol2.mp4" muted loop playsinline controls preload="metadata" poster="media/sim_selfcol2.poster.jpg"></video><img class="vthumb" src="media/sim_selfcol2.poster.jpg" alt=""></div><figcaption><span class="k">시뮬</span>자기충돌 검사</figcaption></figure>
+        </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>30</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 29 · 시뮬 안전 검증 2/3 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">SAFETY · 최민성</span><div class="mg__title">시뮬레이션 OpenArm 텔레옵 — 안전 검증 (3/4)</div></div>
+      <div class="mg">
+        <figure><div class="frame"><video  src="media/sim_armup.mp4" muted loop playsinline controls preload="metadata" poster="media/sim_armup.poster.jpg"></video><img class="vthumb" src="media/sim_armup.poster.jpg" alt=""></div><figcaption><span class="k">시뮬</span>전원 꺼져도 낙하 방지</figcaption></figure>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>31</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 30 · 시뮬 안전 검증 3/3 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">SAFETY · 최민성</span><div class="mg__title">시뮬레이션 OpenArm 텔레옵 — 안전 검증 (4/4)</div></div>
+      <div class="mg mg--1"><figure><div class="frame"><video  src="media/sim_shutdown2.mp4" muted loop playsinline controls preload="metadata" poster="media/sim_shutdown2.poster.jpg"></video><img class="vthumb" src="media/sim_shutdown2.poster.jpg" alt=""></div><figcaption><span class="k">시뮬</span>위험 시 안전 정지</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>32</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 31 · 실물 OpenArm 1/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">REAL · 최민성</span><div class="mg__title">실물 OpenArm 텔레옵</div></div>
+      <div class="mg mg--2"><figure><div class="frame"><video  src="media/demo_real_openarm.mp4" muted loop playsinline controls preload="metadata" poster="media/demo_real_openarm.poster.jpg"></video><img class="vthumb" src="media/demo_real_openarm.poster.jpg" alt=""></div><figcaption><span class="k">실물</span>사람 팔 → 실물 OpenArm</figcaption></figure><figure><div class="frame"><video  src="media/demo_collision.mp4" muted loop playsinline controls preload="metadata" poster="media/demo_collision.poster.jpg"></video><img class="vthumb" src="media/demo_collision.poster.jpg" alt=""></div><figcaption><span class="k">실물</span>충돌 위험 시 자동 정지</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>33</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 32 · 실물 OpenArm 2/2 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">REAL · 최민성</span><div class="mg__title">모방학습 추론 — GR00T 테스트</div></div>
+      <div class="mg mg--1"><figure><div class="frame"><video  src="media/omx_groot_demo_3x.mp4" muted loop playsinline controls preload="metadata" poster="media/omx_groot_demo_3x.poster.jpg"></video><img class="vthumb" src="media/omx_groot_demo_3x.poster.jpg" alt=""></div><figcaption><span class="k">GR00T</span>바구니 담기 자율 (3배속)</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>34</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 33 · GR00T 성공률 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="kp__head"><span class="eyebrow">GR00T · 6/25</span><div class="kp__title">모방학습 추론 — 객체별 성공률</div></div>
+      <div class="kp__row">
+        <div class="kp__cell"><div class="kp__val accent">70<span class="u">%</span></div><div class="kp__lbl">애호박</div></div>
+        <div class="kp__cell"><div class="kp__val">50<span class="u">%</span></div><div class="kp__lbl">토마토 · 당근</div></div>
+        <div class="kp__cell"><div class="kp__val blue">20<span class="u">%</span></div><div class="kp__lbl">마늘</div></div>
+      </div>
+      <div class="next" style="margin-top:0"><b>테스트</b> — "바구니 담기" 10회 시연 학습 → Jetson Thor 자율 수행. <b>전체 ~20%</b>, 적은 데이터로 가능성 확인.</div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>35</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 34 · 프로토타입 1/4 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">PROTOTYPE V2 · 최민성</span><div class="mg__title">밴드형 리드 디바이스 프로토타입 설계·제작 (1/4)</div></div>
+      <div class="mg mg--2"><figure><div class="frame"><img src="media/proto_imu_leader.png" alt="팔 착용 IMU 리더 (IMU ×3)"></div><figcaption>팔 착용 IMU 리더 (IMU ×3)</figcaption></figure><figure><div class="frame"><img src="media/proto_controller.jpg" alt="양손 컨트롤러"></div><figcaption>양손 컨트롤러</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>36</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 35 · 프로토타입 2/4 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">PROTOTYPE V2 · 최민성</span><div class="mg__title">밴드형 리드 디바이스 프로토타입 설계·제작 (2/4)</div></div>
+      <div class="mg mg--1"><figure><div class="frame"><img src="media/circuit.png" alt="회로 모듈화 설계"></div><figcaption>회로 모듈화 설계</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>37</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 36 · 프로토타입 3/4 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">PROTOTYPE V2 · 최민성</span><div class="mg__title">밴드형 리드 디바이스 프로토타입 설계·제작 (3/4)</div></div>
+      <div class="mg mg--2">
+        <figure><div class="frame"><img src="media/cad_carrier_iso.png" alt="헤드 캐리어 (ISO)"></div><figcaption>헤드 캐리어 (ISO)</figcaption></figure>
+        <figure><div class="frame"><img src="media/cad_carrier_top.png" alt="부품 배치 (상단 뷰)"></div><figcaption>부품 배치 (상단 뷰)</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>38</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 37 · 프로토타입 4/4 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="mg__head"><span class="eyebrow">PROTOTYPE V2 · 최민성</span><div class="mg__title">밴드형 리드 디바이스 프로토타입 설계·제작 (4/4)</div></div>
+      <div class="mg mg--2">
+        <figure><div class="frame"><img src="media/cad_carrier_layout.png" alt="캐리어 레이아웃"></div><figcaption>캐리어 레이아웃</figcaption></figure>
+        <figure><div class="frame"><img src="media/trigger_judgment.png" alt="트리거 동작 설계"></div><figcaption>트리거 동작 설계</figcaption></figure></div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>39</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 38 · 최민성 목표 ===================== -->
+  <div class="slide">
+    <div class="toplogo"><img class="caring" src="../assets/logos/caring.png" alt="케어링"><img class="pl" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB"></div>
+    <div class="slide__body">
+      <div class="pl__head"><div><span class="eyebrow">GOAL · 최민성</span><div class="pl__title">목표 — 한 사이클 시연</div></div><hr class="rule"></div>
+      <div class="pl__list">
+        <div class="pl__item"><span class="pl__when">6월 말~7월 초</span><span class="pl__what">리드디바이스 안정화 마무리 + 전용 프로토타입(V2) 제작 착수</span></div>
+        <div class="pl__item"><span class="pl__when">7월</span><span class="pl__what">V2 제작·조립 → 실물 OpenArm 양팔 텔레옵 안정화</span></div>
+        <div class="pl__item"><span class="pl__when">7월 말</span><span class="pl__what">데이터 수집 → GR00T 학습 → 추론 테스트(1차)</span></div>
+        <div class="pl__item"><span class="pl__when">8월</span><span class="pl__what">모방학습 한 사이클 시연 (성공률 향상) / 신규 모델(Qwen VLN) 조사</span></div>
+      </div>
+    </div>
+    <div class="slide__foot"><span class="slide__page"><b>40</b> / 41</span></div>
+  </div>
+
+  <!-- ===================== 39 · CLOSING ===================== -->
+  <div class="slide slide--ink">
+    <div class="slide__body cl__body">
+      <span class="eyebrow cl__eyebrow">THANK YOU</span>
+      <div class="cl__title">감사합니다<span class="dot">.</span></div>
+      <div class="cl__sub">케어링 프로젝트 인턴 — 임소희 · 박우림 · 최민성</div>
+    </div>
+    <!-- <div class="cl__contact"><span><b>web</b>pinklab.art</span><span><b>team</b>모빌리티 · OpenArm · 리드디바이스</span></div> -->
+    <div style="position:absolute;right:var(--slide-pad);bottom:var(--slide-pad);display:flex;align-items:center;gap:16px"><img src="../assets/logos/caring.png" alt="케어링" style="height:24px;filter:brightness(0) invert(1);opacity:.85"><img src="../assets/logos/pinklab-logo-white.png" alt="PINKLAB" style="height:24px"></div>
+  </div>
+
+</div>
+</body>
+</html>

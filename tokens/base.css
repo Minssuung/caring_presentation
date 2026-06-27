@@ -1,0 +1,72 @@
+/* ============================================================
+   Pinklab Slide — Base layer
+   Minimal element defaults wired to tokens. Consumers get a
+   sane starting point: Noto Sans KR everywhere, ink text on
+   white, the signature spaced eyebrow, and a pink rule helper.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text-strong);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--text-accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+
+strong, b { font-weight: var(--fw-bold); color: var(--text-strong); }
+
+::selection { background: var(--pink-200); color: var(--gray-900); }
+
+:focus-visible {
+  outline: var(--border-w-thick) solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- Signature helpers ---- */
+
+/* The spaced uppercase kicker that opens most slides */
+.pl-eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+
+/* The signature thin pink rule */
+.pl-rule {
+  width: 56px;
+  height: var(--rule-w);
+  background: var(--rule-accent);
+  border: 0;
+  border-radius: var(--radius-pill);
+}
+
+/* English-only serif accent — opt in for English pull quotes / hero phrases */
+.pl-serif {
+  font-family: var(--font-serif-en);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-normal);
+}

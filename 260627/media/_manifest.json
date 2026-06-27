@@ -1,0 +1,212 @@
+[
+  {
+    "file": "omx_groot_demo_3x.mp4",
+    "mediaType": "video/mp4",
+    "size": 10600248,
+    "title": "omx_groot_demo_3x.mp4"
+  },
+  {
+    "file": "trigger_judgment.png",
+    "mediaType": "image/png",
+    "size": 156098,
+    "title": "trigger_judgment.png"
+  },
+  {
+    "file": "cad_carrier_layout.png",
+    "mediaType": "image/png",
+    "size": 63315,
+    "title": "cad_carrier_layout.png"
+  },
+  {
+    "file": "cad_carrier_top.png",
+    "mediaType": "image/png",
+    "size": 387843,
+    "title": "cad_carrier_top.png"
+  },
+  {
+    "file": "cad_carrier_iso.png",
+    "mediaType": "image/png",
+    "size": 300411,
+    "title": "cad_carrier_iso.png"
+  },
+  {
+    "file": "circuit.png",
+    "mediaType": "image/png",
+    "size": 186143,
+    "title": "circuit.png"
+  },
+  {
+    "file": "proto_controller.jpg",
+    "mediaType": "image/jpeg",
+    "size": 775847,
+    "title": "proto_controller.jpg"
+  },
+  {
+    "file": "proto_imu_leader.png",
+    "mediaType": "image/png",
+    "size": 3502669,
+    "title": "proto_imu_leader.png"
+  },
+  {
+    "file": "demo_collision.mp4",
+    "mediaType": "video/mp4",
+    "size": 113035,
+    "title": "demo_collision.mp4"
+  },
+  {
+    "file": "demo_real_openarm.mp4",
+    "mediaType": "video/mp4",
+    "size": 8221315,
+    "title": "demo_real_openarm.mp4"
+  },
+  {
+    "file": "sim_shutdown2.mp4",
+    "mediaType": "video/mp4",
+    "size": 69990,
+    "title": "sim_shutdown2.mp4"
+  },
+  {
+    "file": "sim_armup.mp4",
+    "mediaType": "video/mp4",
+    "size": 33118,
+    "title": "sim_armup.mp4"
+  },
+  {
+    "file": "sim_selfcol2.mp4",
+    "mediaType": "video/mp4",
+    "size": 27418,
+    "title": "sim_selfcol2.mp4"
+  },
+  {
+    "file": "sim_workspace.png",
+    "mediaType": "image/png",
+    "size": 187468,
+    "title": "sim_workspace.png"
+  },
+  {
+    "file": "demo_sim_openarm.mp4",
+    "mediaType": "video/mp4",
+    "size": 10254996,
+    "title": "demo_sim_openarm.mp4"
+  },
+  {
+    "file": "joint_stability.svg",
+    "mediaType": "image/svg+xml",
+    "size": 50027,
+    "title": "joint_stability.svg"
+  },
+  {
+    "file": "teleop_mini_c.mp4",
+    "mediaType": "video/mp4",
+    "size": 11216844,
+    "title": "teleop_mini_c.mp4"
+  },
+  {
+    "file": "gimbal_spike.mp4",
+    "mediaType": "video/mp4",
+    "size": 2235100,
+    "title": "gimbal_spike.mp4"
+  },
+  {
+    "file": "demo_minifollow.mp4",
+    "mediaType": "video/mp4",
+    "size": 6123512,
+    "title": "demo_minifollow.mp4"
+  },
+  {
+    "file": "dev_mini_follow.jpg",
+    "mediaType": "image/jpeg",
+    "size": 841181,
+    "title": "dev_mini_follow.jpg"
+  },
+  {
+    "file": "dev_lead_arm.jpg",
+    "mediaType": "image/jpeg",
+    "size": 801601,
+    "title": "dev_lead_arm.jpg"
+  },
+  {
+    "file": "dev_band_lead.jpg",
+    "mediaType": "image/jpeg",
+    "size": 1476461,
+    "title": "dev_band_lead.jpg"
+  },
+  {
+    "file": "imu_serial.png",
+    "mediaType": "image/png",
+    "size": 5680580,
+    "title": "imu_serial.png"
+  },
+  {
+    "file": "image-20260626-142230.png",
+    "mediaType": "image/png",
+    "size": 468134,
+    "title": "image-20260626-142230.png"
+  },
+  {
+    "file": "IMG_0999.mp4",
+    "mediaType": "video/mp4",
+    "size": 12646156,
+    "title": "IMG_0999.mp4"
+  },
+  {
+    "file": "Screencast_from_2026-06-22_13-25-21.mp4",
+    "mediaType": "video/mp4",
+    "size": 3375258,
+    "title": "Screencast from 2026-06-22 13-25-21.mp4"
+  },
+  {
+    "file": "Screencast_from_2026-06-12_18-59-08.mp4",
+    "mediaType": "video/mp4",
+    "size": 21367797,
+    "title": "Screencast from 2026-06-12 18-59-08.mp4"
+  },
+  {
+    "file": "IMG_0949.mp4",
+    "mediaType": "video/mp4",
+    "size": 2666268,
+    "title": "IMG_0949.mp4"
+  },
+  {
+    "file": "IMG_0950.mp4",
+    "mediaType": "video/mp4",
+    "size": 1921596,
+    "title": "IMG_0950.mp4"
+  },
+  {
+    "file": "IMG_0961.mp4",
+    "mediaType": "video/mp4",
+    "size": 17078013,
+    "title": "IMG_0961.mp4"
+  },
+  {
+    "file": "Screencast_from_2026-06-12_18-31-35_trimmed2.mp4",
+    "mediaType": "video/mp4",
+    "size": 3345675,
+    "title": "Screencast from 2026-06-12 18-31-35_trimmed2.mp4"
+  },
+  {
+    "file": "8673a015-acde-4d33-b188-e849b9a16ba9.png",
+    "mediaType": "image/png",
+    "size": 604494,
+    "title": "8673a015-acde-4d33-b188-e849b9a16ba9.png"
+  },
+  {
+    "file": "image-20260626-043546.png",
+    "mediaType": "image/png",
+    "size": 126686,
+    "title": "image-20260626-043546.png"
+  },
+  {
+    "file": "image-20260626-030346.png",
+    "mediaType": "image/png",
+    "size": 507391,
+    "title": "image-20260626-030346.png"
+  },
+  {
+    "file": "image-20260624-084923.png",
+    "mediaType": "image/png",
+    "size": 1547909,
+    "title": "image-20260624-084923.png"
+  }
+]

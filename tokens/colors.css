@@ -1,0 +1,93 @@
+/* ============================================================
+   Pinklab Slide — Color tokens
+   Philosophy: an achromatic silver/white/black field does the
+   work. Pink is the primary POINT; ultramarine is the secondary
+   accent. The two fuse in the brand gradient (the logo mark).
+   Keep color to ~10% of any surface.
+   ============================================================ */
+
+:root {
+  /* ---- Brand pink (rose) — primary point color ---- */
+  --pink-50:  #FDEEF3;
+  --pink-100: #FBD9E4;
+  --pink-200: #F7B4CB;
+  --pink-300: #F286AC;
+  --pink-400: #EE6494;
+  --pink-500: #EC4B7E;  /* brand core */
+  --pink-600: #DA2E66;
+  --pink-700: #B61F52;
+  --pink-800: #8E1A42;
+  --pink-900: #5E1530;
+
+  /* ---- Ultramarine blue — secondary accent ---- */
+  --blue-50:  #ECEDFB;
+  --blue-100: #DADCF7;
+  --blue-200: #B7BAEF;
+  --blue-300: #8E92E6;
+  --blue-400: #6166DF;
+  --blue-500: #3D43DB;  /* ultramarine core */
+  --blue-600: #2E33C2;
+  --blue-700: #2528A0;
+  --blue-800: #1F2080;
+  --blue-900: #181955;
+
+  /* ---- Achromatic neutrals (cool silver — the lab field) ---- */
+  --white:    #FFFFFF;
+  --paper:    #F7F8F9;  /* cool off-white page tint */
+  --gray-50:  #F2F4F5;
+  --gray-100: #E8EAEC;
+  --gray-200: #D6D9DD;
+  --gray-300: #B9BDC4;
+  --gray-400: #8E939B;
+  --gray-500: #686D75;
+  --gray-600: #494D54;
+  --gray-700: #2F3238;
+  --gray-800: #1E2024;
+  --gray-900: #121316;  /* ink — near-black */
+  --black:    #0A0B0D;  /* true dark for full-bleed slides */
+
+  /* ---- Brand gradient (logo mark: pink → ultramarine) ---- */
+  --brand-gradient: linear-gradient(135deg, var(--pink-500) 0%, var(--blue-500) 100%);
+  --brand-gradient-soft: linear-gradient(135deg, var(--pink-400) 0%, var(--blue-400) 100%);
+
+  /* ---- Semantic: text ---- */
+  --text-strong:  var(--gray-900);  /* headlines */
+  --text-body:    var(--gray-700);  /* paragraphs */
+  --text-muted:   var(--gray-500);  /* captions, meta */
+  --text-faint:   var(--gray-400);  /* disabled, hints */
+  --text-accent:  var(--pink-600);  /* pink emphasis on light */
+  --text-blue:    var(--blue-600);  /* ultramarine emphasis on light */
+  --text-on-dark: var(--white);
+  --text-on-pink: var(--white);
+
+  /* ---- Semantic: surfaces ---- */
+  --surface-page:  var(--white);
+  --surface-paper: var(--paper);
+  --surface-card:  var(--white);
+  --surface-sunk:  var(--gray-50);
+  --surface-ink:   var(--gray-900);  /* dark slide background */
+  --surface-black: var(--black);
+  --surface-accent: var(--pink-500); /* solid pink block — use sparingly */
+  --surface-accent-soft: var(--pink-50);
+  --surface-blue:  var(--blue-500);
+  --surface-blue-soft: var(--blue-50);
+
+  /* ---- Semantic: borders + lines ---- */
+  --border-subtle:  var(--gray-200);
+  --border-default: var(--gray-300);
+  --border-strong:  var(--gray-900);
+  --border-accent:  var(--pink-500);
+  --rule-accent:    var(--pink-500);  /* the signature thin pink rule */
+
+  /* ---- Accent aliases ---- */
+  --accent:        var(--pink-500);
+  --accent-hover:  var(--pink-600);
+  --accent-press:  var(--pink-700);
+  --accent-soft:   var(--pink-50);
+  --secondary:        var(--blue-500);
+  --secondary-hover:  var(--blue-600);
+  --secondary-soft:   var(--blue-50);
+
+  /* ---- Focus ---- */
+  --focus-ring: var(--pink-500);
+}

@@ -1,0 +1,59 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Comparison — Two Column" subtitle="Before / after, pink highlights the winner" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<style>
+  html, body { margin: 0; }
+  .cmp__head { text-align: center; margin-bottom: 40px; }
+  .cmp__head .eyebrow { display: block; margin-bottom: 14px; }
+  .cmp__title { font-size: 44px; font-weight: 700; letter-spacing: -0.02em; }
+  .cmp__cols { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cmp__card { border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 40px; display: flex; flex-direction: column; }
+  .cmp__card--win { border-color: var(--accent); box-shadow: var(--shadow-pink); }
+  .cmp__cap { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  .cmp__card--win .cmp__cap { color: var(--accent); }
+  .cmp__name { margin-top: 12px; font-size: 32px; font-weight: 700; }
+  .cmp__list { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+  .cmp__li { display: flex; gap: 14px; align-items: flex-start; font-size: 18px; color: var(--text-body); line-height: 1.5; }
+  .cmp__li .m { flex: none; width: 7px; height: 7px; margin-top: 9px; border-radius: 999px; background: var(--gray-300); }
+  .cmp__card--win .cmp__li .m { background: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide__body">
+      <div class="cmp__head">
+        <span class="eyebrow">BEFORE / AFTER</span>
+        <div class="cmp__title">무엇이 달라지나</div>
+      </div>
+      <div class="cmp__cols">
+        <div class="cmp__card">
+          <span class="cmp__cap">기존</span>
+          <div class="cmp__name">제각각의 장표</div>
+          <div class="cmp__list">
+            <div class="cmp__li"><span class="m"></span>발표자마다 다른 서식</div>
+            <div class="cmp__li"><span class="m"></span>과한 색과 장식</div>
+            <div class="cmp__li"><span class="m"></span>읽히지 않는 작은 글씨</div>
+          </div>
+        </div>
+        <div class="cmp__card cmp__card--win">
+          <span class="cmp__cap">핑크랩 시스템</span>
+          <div class="cmp__name">하나의 언어</div>
+          <div class="cmp__list">
+            <div class="cmp__li"><span class="m"></span>일관된 토큰과 컴포넌트</div>
+            <div class="cmp__li"><span class="m"></span>화이트·블랙 + 한 점의 핑크</div>
+            <div class="cmp__li"><span class="m"></span>어디서나 또렷한 시인성</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot">
+      <img class="slide__logo" src="../assets/logos/pinklab-logo-black.png" alt="PINKLAB">
+      <span class="slide__page">0<b>8</b> / 09</span>
+    </div>
+  </div>
+</body>
+</html>
